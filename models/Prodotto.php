@@ -6,14 +6,12 @@ class Prodotto
     private $nome;
     private $immagine;
     private $prezzo;
-    private $categoria;
 
-    public function __construct($nome, $immagine, $prezzo, $categoria)
+    public function __construct($nome, $immagine, $prezzo)
     {
-        $this->nome = $nome;
-        $this->immagine = $immagine;
-        $this->prezzo = $prezzo;
-        $this->categoria = $categoria;
+        $this->setNome($nome);
+        $this->setImmagine($immagine);
+        $this->setPrezzo($prezzo);
     }
 
     // recuperiamo i valori delle variabili in lettura e in scrittura
@@ -46,15 +44,5 @@ class Prodotto
     public function setPrezzo($prezzo)
     {
         $this->prezzo = $prezzo;
-    }
-
-    // CATEGORIA
-    public function getCategoria()
-    {
-        return $this->categoria;
-    }
-    public function setCategoria($categoria)
-    {
-        $this->categoria = $categoria;
     }
 }
