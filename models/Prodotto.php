@@ -44,7 +44,7 @@ class Prodotto
     public function setPrezzo($prezzo)
     {
         if ($prezzo <= 0) {
-            throw new Exception("Il valore del prezzo deve essere maggiore di 0!");
+            throw new Exception("Il valore del PREZZO deve essere maggiore di 0!");
         }
         $this->prezzo = $prezzo;
     }
