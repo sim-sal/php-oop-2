@@ -27,10 +27,13 @@
             <div class="row row-cols-2 row-cols-lg-4 g-2 g-lg-3">
                 <?php foreach ($prodottoCane as $prod) { ?>
                     <div class="col-md-4 ms-md-3 card_prod">
-                        <span>Categoria: <?php echo $prod->getCategoria()->getNomeCategoria(); ?></span>
+                        <div class="category">
+                            <span>Categoria: <?php echo $prod->getCategoria()->getNomeCategoria(); ?></span>
+                        </div>
+
                         <h2><?php echo $prod->getNome(); ?></h2>
                         <img class="img_prod" src="<?php echo $prod->getImmagine(); ?>" alt="">
-                        <h5>Prezzo: <?php echo $prod->getPrezzo(); ?></h5>
+                        <h5>Prezzo: <?php echo $prod->getPrezzo(); ?><i class="fa-solid fa-euro-sign"></i></h5>
                         <span>Tipologia: <?php echo $prod->getTipologia(); ?></span>
                     </div>
                 <?php } ?>
@@ -40,10 +43,13 @@
             <div class="row row-cols-2 row-cols-lg-4 g-2 g-lg-3">
                 <?php foreach ($prodottoGatto as $prod) { ?>
                     <div class="col-md-4 ms-md-3 card_prod">
-                        <span>Categoria: <?php echo $prod->getCategoria()->getNomeCategoria(); ?></span>
+                        <div class="category">
+                            <span>Categoria: <?php echo $prod->getCategoria()->getNomeCategoria(); ?></span>
+                        </div>
+
                         <h2><?php echo $prod->getNome(); ?></h2>
                         <img class="img_prod" src="<?php echo $prod->getImmagine(); ?>" alt="">
-                        <h5>Prezzo: <?php echo $prod->getPrezzo(); ?></h5>
+                        <h5>Prezzo: <?php echo $prod->getPrezzo(); ?><i class="fa-solid fa-euro-sign"></i></h5>
                         <span>Tipologia: <?php echo $prod->getTipologia(); ?></span>
                     </div>
                 <?php } ?>
@@ -75,6 +81,10 @@
     .card_prod {
         border: 2px solid black;
         border-radius: 10px;
+    }
+
+    .category {
+        border-bottom: 1px solid black;
     }
 </style>
 

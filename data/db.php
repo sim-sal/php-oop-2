@@ -11,7 +11,7 @@ try {
     $categoriaGatto = new Categoria('<i class="fa-solid fa-cat"></i>');
 
     // creo un prodotto per il cane
-    $prodottoCane1 = new ProdottoCane("Scatoletta di pollo", "https://m.media-amazon.com/images/I/71nSzTZ+kHL._AC_SL1500_.jpg", 13.86, $categoriaCane, "Cibo");
+    $prodottoCane1 = new ProdottoCane("Cesar 'Pollo&Manzo'", "https://m.media-amazon.com/images/I/71nSzTZ+kHL._AC_SL1500_.jpg", 13.86, $categoriaCane, "Cibo");
     $prodottoCane2 = new ProdottoCane("Lava zampe", "https://m.media-amazon.com/images/I/81RghwxB42L._AC_SL1500_.jpg", 14.99, $categoriaCane, "Accessori");
     $prodottoCane3 = new ProdottoCane("Tiro alla fune", "https://m.media-amazon.com/images/I/812HiDaUXYL._AC_SL1500_.jpg", 11.99, $categoriaCane, "Giochi");
 
