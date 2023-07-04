@@ -24,7 +24,7 @@ try {
     // creo un prodotto cibo per il gatto
     $ciboGatto1 = new Cibo("Purina Gourmet", "https://m.media-amazon.com/images/I/71gabeunxzL._AC_SL1500_.jpg", 17.49, $categoriaGatto, "Cibo Umido", 85, "09 / 10 / 2023", 26);
     // creo un prodotto accessorio per il gatto
-    $accessorioGatto1 = new Accessorio("Lettiera", "https://m.media-amazon.com/images/I/71h5k6tT2qL._AC_SL1500_.jpg", 24.99, $categoriaGatto, "Accessori", 5);
+    $accessorioGatto1 = new Accessorio("Lettiera", "https://m.media-amazon.com/images/I/71h5k6tT2qL._AC_SL1500_.jpg", 24.99, $categoriaGatto, "Accessori", 26);
     // creo un prodotto gioco per il gatto
     $giocoGatto1 = new Gioco("Palla Interattiva", "https://m.media-amazon.com/images/I/61nbqP3EE9L._AC_SL1500_.jpg", 11.69, $categoriaGatto, "Giochi", 12);
 

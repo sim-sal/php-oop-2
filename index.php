@@ -35,8 +35,8 @@
                         <img class="img_prod" src="<?php echo $prod->getImmagine(); ?>" alt="">
                         <h5>Prezzo: <?php echo $prod->getPrezzo(); ?><i class="fa-solid fa-euro-sign"></i></h5>
                         <div class="info_prod">
-                            <span>Tipologia: <?php echo $prod->getTipologia(); ?></span>
-                            <span>Disponibilità: <?php echo $prod->getScorte(); ?></span>
+                            <span>Tipologia: <span class="type"><?php echo $prod->getTipologia(); ?></span></span>
+                            <span>Disponibilità: <span class="scorte"><?php echo $prod->getScorte(); ?></span></span>
                         </div>
                     </div>
                 <?php } ?>
@@ -80,6 +80,20 @@
     .info_prod {
         display: flex;
         justify-content: space-around;
+        margin-bottom: 10px;
+    }
+
+    .type {
+        font-style: italic;
+        font-weight: bold;
+    }
+
+    .scorte {
+        font-weight: bold;
+        background-color: black;
+        color: white;
+        padding: 5px;
+        border-radius: 20px;
     }
 </style>
 
