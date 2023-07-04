@@ -71,11 +71,11 @@
 
     .row {
         justify-content: space-between;
-        margin-bottom: 20px;
+        margin-top: 10px;
     }
 
     .img_prod {
-        max-width: 200px;
+        max-width: 170px;
     }
 
     .card_prod {
