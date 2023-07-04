@@ -41,10 +41,6 @@
                     </div>
                 <?php } ?>
             </div>
-
-            <!-- creo le card per i prodotti del gatto -->
-
-
         </div>
 
     </main>
