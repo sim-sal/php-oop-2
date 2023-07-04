@@ -4,14 +4,18 @@ class Cibo extends Prodotto
 {
     private Categoria $categoria;
     private $tipologia;
+    private $peso;
+    private $scadenza;
 
-    public function __construct($nome, $immagine, $prezzo, Categoria $categoria, $tipologia)
+    public function __construct($nome, $immagine, $prezzo, Categoria $categoria, $tipologia, $peso, $scadenza, $scorte)
     {
         // eredito le variabili "nome", "immagine", "prezzo" dalla classe madre
-        parent::__construct($nome, $immagine, $prezzo);
+        parent::__construct($nome, $immagine, $prezzo, $scorte);
 
         $this->setCategoria($categoria);
         $this->setTipologia($tipologia);
+        $this->setPeso($peso);
+        $this->setScadenza($scadenza);
     }
 
     // recuperiamo i valori delle variabili in lettura e in scrittura
@@ -34,5 +38,25 @@ class Cibo extends Prodotto
     public function setTipologia($tipologia)
     {
         $this->tipologia = $tipologia;
+    }
+
+    // PESP
+    public function getPeso()
+    {
+        return $this->peso;
+    }
+    public function setPeso($peso)
+    {
+        $this->peso = $peso;
+    }
+
+    // SCADENZA
+    public function getScadenza()
+    {
+        return $this->scadenza;
+    }
+    public function setScadenza($scadenza)
+    {
+        $this->scadenza = $scadenza;
     }
 }

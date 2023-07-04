@@ -2,16 +2,18 @@
 
 class Gioco extends Prodotto
 {
+
     private Categoria $categoria;
     private $tipologia;
 
-    public function __construct($nome, $immagine, $prezzo, Categoria $categoria, $tipologia)
+    public function __construct($nome, $immagine, $prezzo, Categoria $categoria, $tipologia, $scorte)
     {
         // eredito le variabili "nome", "immagine", "prezzo" dalla classe madre
-        parent::__construct($nome, $immagine, $prezzo);
+        parent::__construct($nome, $immagine, $prezzo, $scorte);
 
         $this->setCategoria($categoria);
         $this->setTipologia($tipologia);
+        $this->setScorte($scorte);
     }
 
     // recuperiamo i valori delle variabili in lettura e in scrittura

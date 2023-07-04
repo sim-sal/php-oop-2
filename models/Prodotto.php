@@ -1,17 +1,35 @@
 <?php
 
+trait Scorte
+{
+    public $scorte;
+
+    public function getScorte()
+    {
+        return $this->scorte;
+    }
+    public function setScorte($scorte)
+    {
+        $this->scorte = $scorte;
+    }
+}
+
 // classe "madre" dei prodotti
 class Prodotto
 {
+    use Scorte;
+
     private $nome;
     private $immagine;
     private $prezzo;
 
-    public function __construct($nome, $immagine, $prezzo)
+    public function __construct($nome, $immagine, $prezzo, $scorte)
     {
         $this->setNome($nome);
         $this->setImmagine($immagine);
         $this->setPrezzo($prezzo);
+
+        $this->setScorte($scorte);
     }
 
     // recuperiamo i valori delle variabili in lettura e in scrittura

@@ -34,7 +34,10 @@
                         <h2><?php echo $prod->getNome(); ?></h2>
                         <img class="img_prod" src="<?php echo $prod->getImmagine(); ?>" alt="">
                         <h5>Prezzo: <?php echo $prod->getPrezzo(); ?><i class="fa-solid fa-euro-sign"></i></h5>
-                        <span>Tipologia: <?php echo $prod->getTipologia(); ?></span>
+                        <div class="info_prod">
+                            <span>Tipologia: <?php echo $prod->getTipologia(); ?></span>
+                            <span>Disponibilità: <?php echo $prod->getScorte(); ?></span>
+                        </div>
                     </div>
                 <?php } ?>
             </div>
@@ -72,6 +75,11 @@
 
     .category {
         border-bottom: 1px solid black;
+    }
+
+    .info_prod {
+        display: flex;
+        justify-content: space-around;
     }
 </style>
 
