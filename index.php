@@ -10,6 +10,9 @@
     require_once("./data/db.php");
     ?>
 
+    <!-- importo font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <!-- importo bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 
@@ -20,9 +23,22 @@
 <body>
     <main>
         <div class="container text-center">
-            <!-- creo le card -->
+            <!-- creo le card per i prodotti del cane -->
             <div class="row row-cols-2 row-cols-lg-4 g-2 g-lg-3">
                 <?php foreach ($prodottoCane as $prod) { ?>
+                    <div class="col-md-4 ms-md-3 card_prod">
+                        <span>Categoria: <?php echo $prod->getCategoria()->getNomeCategoria(); ?></span>
+                        <h2><?php echo $prod->getNome(); ?></h2>
+                        <img class="img_prod" src="<?php echo $prod->getImmagine(); ?>" alt="">
+                        <h5>Prezzo: <?php echo $prod->getPrezzo(); ?></h5>
+                        <span>Tipologia: <?php echo $prod->getTipologia(); ?></span>
+                    </div>
+                <?php } ?>
+            </div>
+
+            <!-- creo le card per i prodotti del gatto -->
+            <div class="row row-cols-2 row-cols-lg-4 g-2 g-lg-3">
+                <?php foreach ($prodottoGatto as $prod) { ?>
                     <div class="col-md-4 ms-md-3 card_prod">
                         <span>Categoria: <?php echo $prod->getCategoria()->getNomeCategoria(); ?></span>
                         <h2><?php echo $prod->getNome(); ?></h2>
@@ -49,6 +65,7 @@
 
     .row {
         justify-content: space-between;
+        margin-bottom: 20px;
     }
 
     .img_prod {
