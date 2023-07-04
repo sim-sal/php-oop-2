@@ -1,6 +1,6 @@
 <?php
 
-class ProdottoGatto extends Prodotto
+class Accessorio extends Prodotto
 {
     private Categoria $categoria;
     private $tipologia;
