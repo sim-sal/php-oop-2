@@ -40,7 +40,7 @@ class Cibo extends Prodotto
         $this->tipologia = $tipologia;
     }
 
-    // PESP
+    // PESO
     public function getPeso()
     {
         return $this->peso;
