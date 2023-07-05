@@ -17,7 +17,7 @@ try {
     // creo un prodotto accessorio
     $accessorioCane1 = new Accessorio("Lava zampe", "https://m.media-amazon.com/images/I/81RghwxB42L._AC_SL1500_.jpg", 14.99, $categoriaCane, "Accessori", "Blu", "Cotone e plastica", 22);
     // creo un prodotto gioco
-    $giocoCane1 = new Gioco("Tiro alla fune", "https://m.media-amazon.com/images/I/812HiDaUXYL._AC_SL1500_.jpg", 11.99, $categoriaCane, "Giochi", 18);
+    $giocoCane1 = new Gioco("Tiro alla fune", "https://m.media-amazon.com/images/I/812HiDaUXYL._AC_SL1500_.jpg", 11.99, $categoriaCane, "Giochi", "VORHOT", 18);
 
 
     // PRODOTTI PER IL GATTO
@@ -26,7 +26,7 @@ try {
     // creo un prodotto accessorio
     $accessorioGatto1 = new Accessorio("Lettiera", "https://m.media-amazon.com/images/I/71h5k6tT2qL._AC_SL1500_.jpg", 24.99, $categoriaGatto, "Accessori", "Grigio", "Acciaio inox", 26);
     // creo un prodotto gioco
-    $giocoGatto1 = new Gioco("Palla Interattiva", "https://m.media-amazon.com/images/I/61nbqP3EE9L._AC_SL1500_.jpg", 11.69, $categoriaGatto, "Giochi", 12);
+    $giocoGatto1 = new Gioco("Palla Interattiva", "https://m.media-amazon.com/images/I/61nbqP3EE9L._AC_SL1500_.jpg", 11.69, $categoriaGatto, "Giochi", "BAYTION", 12);
 
     // inseriamo i prodotti di entrambe le categorie in un unico array
     $prodotti = [$ciboCane1, $accessorioCane1, $giocoCane1, $ciboGatto1, $accessorioGatto1, $giocoGatto1];

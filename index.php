@@ -56,6 +56,8 @@
                                     echo "Scadenza: <br>" . $prod->getScadenza();
                                 } elseif ($prod->getTipologia() == "Accessori") {
                                     echo "Materiale: <br>" . $prod->getMateriale();
+                                } elseif ($prod->getTipologia() == "Giochi") {
+                                    echo "Marchio: <br>" . $prod->getMarchio();
                                 }
                                 ?>
                             </div>
