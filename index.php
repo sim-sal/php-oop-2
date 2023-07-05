@@ -34,9 +34,32 @@
                         <h2><?php echo $prod->getNome(); ?></h2>
                         <img class="img_prod" src="<?php echo $prod->getImmagine(); ?>" alt="">
                         <h5>Prezzo: <?php echo $prod->getPrezzo(); ?><i class="fa-solid fa-euro-sign"></i></h5>
-                        <div class="info_prod">
-                            <span>Tipologia: <span class="type"><?php echo $prod->getTipologia(); ?></span></span>
-                            <span>Disponibilità: <span class="scorte"><?php echo $prod->getScorte(); ?></span></span>
+                        <div class="row info_prod">
+                            <div class="col-6">
+                                <span>Tipologia: <span class="type"><?php echo $prod->getTipologia(); ?></span></span>
+                            </div>
+                            <div class="col-6">
+                                <span>Disponibilità: <span class="scorte"><?php echo $prod->getScorte(); ?></span></span>
+                            </div>
+                            <div class="col-6">
+                                <?php
+                                if ($prod->getTipologia() == "Cibo") {
+                                    echo "Peso: " . $prod->getPeso() . "g";
+                                } elseif ($prod->getTipologia() == "Accessori") {
+                                    echo "Colore: " . $prod->getColore();
+                                }
+                                ?>
+                            </div>
+                            <div class="col-6">
+                                <?php
+                                if ($prod->getTipologia() == "Cibo") {
+                                    echo "Scadenza: <br>" . $prod->getScadenza();
+                                } elseif ($prod->getTipologia() == "Accessori") {
+                                    echo "Materiale: <br>" . $prod->getMateriale();
+                                }
+                                ?>
+                            </div>
+
                         </div>
                     </div>
                 <?php } ?>
@@ -74,8 +97,6 @@
     }
 
     .info_prod {
-        display: flex;
-        justify-content: space-around;
         margin-bottom: 10px;
     }
 
