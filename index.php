@@ -23,7 +23,7 @@
 <body>
     <main>
         <div class="container text-center">
-            <!-- creo le card per i prodotti del cane -->
+            <!-- creo le card per i prodotti  -->
             <div class="row row-cols-2 row-cols-lg-4 g-2 g-lg-3">
                 <?php foreach ($prodotti as $prod) { ?>
                     <div class="col-md-4 ms-md-3 card_prod">
